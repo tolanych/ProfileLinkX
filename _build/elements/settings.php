@@ -31,4 +31,9 @@ return [
         'value' => '@media, @import',
         'area' => 'profilelinkx_main',
     ],
+    'pass_fullname' => [
+        'xtype' => 'combo-boolean',
+        'value' => false,
+        'area' => 'profilelinkx_main',
+    ],
 ];

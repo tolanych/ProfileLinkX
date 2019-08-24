@@ -14,3 +14,5 @@ $_lang['setting_profilelinkx_chunk'] = 'Чанк профиля';
 $_lang['setting_profilelinkx_chunk_desc'] = 'Чанк, который показывается при наведении на ссылку';
 $_lang['setting_profilelinkx_exclude'] = 'Исключение';
 $_lang['setting_profilelinkx_exclude_desc'] = 'Перечислите через запятую, на какие @слова не следует реагировать и подставлять имя профиля';
+$_lang['setting_profilelinkx_pass_fullname'] = 'Подставлять fullname';
+$_lang['setting_profilelinkx_pass_fullname_desc'] = 'Подставлять вместо username - fullname пользователя, если существует';

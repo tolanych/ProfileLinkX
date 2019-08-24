@@ -14,3 +14,5 @@ $_lang['setting_profilelinkx_chunk'] = 'Profile chunk';
 $_lang['setting_profilelinkx_chunk_desc'] = 'Chunk showing on mouseover';
 $_lang['setting_profilelinkx_exclude'] = 'Exclude';
 $_lang['setting_profilelinkx_exclude_desc'] = '@words for ignore replacing';
+$_lang['setting_profilelinkx_pass_fullname'] = 'Set fullname';
+$_lang['setting_profilelinkx_pass_fullname_desc'] = 'Instead username set fullname if exist';

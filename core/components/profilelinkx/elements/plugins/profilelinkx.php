@@ -20,10 +20,13 @@ switch ($modx->event->name) {
             $array_replace = array();
 
             foreach ($users as $username) {
+                if (!$user = $modx->getObject('modUser', ['username:LIKE' => mb_substr( $username, 1)]))
+                    continue;
+
                 $params = array(
                     'class' => $profilelinkx_class,
-                    'input' => $username,
-                    'username' => mb_substr( $username, 1)
+                    'input' => $modx->getOption('profilelinkx_pass_fullname') ? ($user->Profile->get('fullname') ? : $username) : $username,
+                    'username' => $user->get('username')
                 );
 
                 $array_name[] = $username;
