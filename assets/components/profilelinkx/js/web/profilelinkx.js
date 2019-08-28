@@ -51,8 +51,8 @@ var ProfileLinkX = {
 
     var elements = document.querySelectorAll(ProfileLinkXConfig['textarea']);
 
-    for (var ed in elements) {
-      var i = new Textcomplete.editors.Textarea(elements[ed]);
+    [].forEach.call(elements, function(ed) {
+      var i = new Textcomplete.editors.Textarea(ed);
       new Textcomplete(i).register([{
         index: 1,
         match: /\B@([а-яё\w.-]*)$/i,
@@ -90,7 +90,7 @@ var ProfileLinkX = {
           return '@' + t.tag + ' '
         }
       }])
-    }
+    })
   }
 };
 if (typeof ProfileLinkXConfig != 'undefined') {
