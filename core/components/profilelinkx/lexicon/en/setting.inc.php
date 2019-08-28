@@ -3,7 +3,7 @@
 $_lang['area_profilelinkx_main'] = 'Main';
 
 $_lang['setting_profilelinkx_env'] = 'Environment';
-$_lang['setting_profilelinkx_env_desc'] = 'Libs variation pass the environment. default - including all libs from component. bs4 - already using Bootstrap 4, don\'t including there libs. clear - not including scripts and libs. May helpful if developer create JS-bundle in webpack/gulp/etc';
+$_lang['setting_profilelinkx_env_desc'] = 'Libs variation pass the environment. default - including all libs from component. clear - not including scripts and libs. May helpful if developer create JS-bundle in webpack/gulp/etc';
 $_lang['setting_profilelinkx_class'] = 'Class link';
 $_lang['setting_profilelinkx_class_desc'] = 'Class for [[+class]]';
 $_lang['setting_profilelinkx_link'] = 'Template link';
@@ -16,3 +16,5 @@ $_lang['setting_profilelinkx_exclude'] = 'Exclude';
 $_lang['setting_profilelinkx_exclude_desc'] = '@words for ignore replacing';
 $_lang['setting_profilelinkx_pass_fullname'] = 'Set fullname';
 $_lang['setting_profilelinkx_pass_fullname_desc'] = 'Instead username set fullname if exist';
+$_lang['setting_profilelinkx_sug_textarea'] = 'textarea selector';
+$_lang['setting_profilelinkx_sug_textarea_desc'] = 'textarea editor selector for suggest @username';

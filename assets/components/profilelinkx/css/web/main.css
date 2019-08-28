@@ -1,0 +1,31 @@
+.textcomplete-dropdown {
+  background-color: white;
+  border: 1px solid #ddd;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.textcomplete-dropdown li {
+  border-top: 1px solid #ddd;
+  padding: 2px 5px;
+  margin: 0;
+}
+
+.textcomplete-dropdown li:first-child {
+  border-top: none;
+}
+
+.textcomplete-dropdown .active {
+  background-color: rgb(110, 183, 219);
+}
+
+.textcomplete-dropdown a {
+  height: 18px;
+  text-decoration: none;
+  color: #555;
+}
+
+.textcomplete-dropdown a:hover {
+  cursor: pointer;
+}

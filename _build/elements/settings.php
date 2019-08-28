@@ -13,7 +13,7 @@ return [
     ],
     'link' => [
         'xtype' => 'textfield',
-        'value' => '<a href="/account/[[+username]]/" class=[[+class]]>[[+input]]</a>',
+        'value' => '<a href="/account/[[+username]]/" class="[[+class]]" attr-user="[[+username]]">[[+input]]</a>',
         'area' => 'profilelinkx_main',
     ],
     'use_tooltip' => [
@@ -34,6 +34,21 @@ return [
     'pass_fullname' => [
         'xtype' => 'combo-boolean',
         'value' => false,
+        'area' => 'profilelinkx_main',
+    ],
+    'sug_textarea' => [
+        'xtype' => 'textfield',
+        'value' => '.user-suggest',
+        'area' => 'profilelinkx_main',
+    ],
+    'sug_exclude' => [
+        'xtype' => 'textfield',
+        'value' => 'admin',
+        'area' => 'profilelinkx_main',
+    ],
+    'sug_exclude_group' => [
+        'xtype' => 'textfield',
+        'value' => '',
         'area' => 'profilelinkx_main',
     ],
 ];

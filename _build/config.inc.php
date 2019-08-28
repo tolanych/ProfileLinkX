@@ -18,11 +18,11 @@ return [
     // Which elements should be updated on package upgrade
     'update' => [
         'chunks' => false,
-        'menus' => true,
-        'permission' => true,
+        'menus' => false,
+        'permission' => false,
         'plugins' => true,
-        'policies' => true,
-        'policy_templates' => true,
+        'policies' => false,
+        'policy_templates' => false,
         'resources' => false,
         'settings' => false,
         'snippets' => true,
@@ -31,9 +31,9 @@ return [
     ],
     // Which elements should be static by default
     'static' => [
-        'plugins' => false,
-        'snippets' => false,
-        'chunks' => false,
+        'plugins' => true,
+        'snippets' => true,
+        'chunks' => true,
     ],
     // Log settings
     'log_level' => !empty($_REQUEST['download']) ? 0 : 3,

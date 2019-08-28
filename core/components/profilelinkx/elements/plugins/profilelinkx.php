@@ -32,7 +32,11 @@ switch ($modx->event->name) {
                 $array_name[] = $username;
                 $array_replace[] = $chunk->process($params);
             }
+
+            if (count($array_name)) {
+                $output = str_ireplace($array_name,$array_replace,$output);
+            }
         }
-        $output = str_ireplace($array_name,$array_replace,$output);
+
         break;
 }
