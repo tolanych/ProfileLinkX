@@ -2,8 +2,21 @@
 /** @var modX $modx */
 switch ($modx->event->name) {
     case 'OnWebPagePrerender':
+        $is_body = false;
         $output = &$modx->resource->_output;
-        preg_match_all('/@[A-Za-z0-9_]{1,}/imu',$output,$match);
+
+        preg_match('/<body.*\/body>/s',$output,$matches);
+
+        if ($matches) {
+            $is_body = true;
+            $out = $matches[0];
+        } else {
+            $out = $output;
+        }
+    
+        $re = '/@[\w]{1,}(?=(?:[^"]*"[^"]*")*[^"]*$)/imu';
+
+        preg_match_all($re,$out,$match);
         $exclude = array_map('trim', explode(',', $modx->getOption('profilelinkx_exclude')));
         $users = array_diff($match[0], $exclude);
 
@@ -29,12 +42,18 @@ switch ($modx->event->name) {
                     'username' => $user->get('username')
                 );
 
-                $array_name[] = $username;
+                $array_name[] = '/'.$username.'(?=(?:[^"]*"[^"]*")*[^"]*$)/imu';
                 $array_replace[] = $chunk->process($params);
             }
 
             if (count($array_name)) {
-                $output = str_ireplace($array_name,$array_replace,$output);
+                $out = preg_replace($array_name,$array_replace,$out);
+            }
+
+            if ($is_body) {
+                $output = preg_replace('/<body.*\/body>/s',$out,$output);
+            } else {
+                $output = $out;
             }
         }
 
